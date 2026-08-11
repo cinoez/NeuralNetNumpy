@@ -4,7 +4,8 @@ from Model import MLP
 
 if __name__ == "__main__":
     model = MLP([2, 5, 1])
-    inputs = np.array([[random() / 2 for _ in range(2)] for _ in range(1000)])
+    inputs = np.array([[random() / 2 for _ in range(2)] for _ in 
+range(10000)])
     targets = np.array([[i[0] * i[1]] for i in inputs])
     model.train(inputs, targets, 50, 10)
 
